@@ -1,0 +1,21 @@
+<div class="race-winners">
+
+	<div ng-if="!vm.loading">
+		<h1>{{::vm.season}} Race Winners</h1>
+
+		<div class="grid-wrapper">
+			<a class="button button--no-border button--small" ui-sref="app.season-champions">&larr; Back</a>
+
+			<grid list-items="vm.raceWinners" 
+				  table-head-items="[
+				  	{label: 'Race', icon: 'flag-checkered'},
+				  	{label: 'Driver', icon: 'user'},
+				  	{label: 'Time', icon: 'clock-o'}]">
+			</grid>
+		</div>
+		
+	</div>
+
+	<span us-spinner="{radius: 12, width: 3, length: 5}" spinner-on="vm.loading"></span>
+
+</div>

@@ -1,0 +1,46 @@
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    @include transition(all .2s ease-in);
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    &--primary {
+        background-color: $red;
+        &:hover {
+            background-color: darken($red, 10%);
+        }
+    }
+    &--border {
+        background-color: transparent;
+        color: $red;
+        border: 1px solid $red;
+        &:hover {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+    &--no-border {
+        font-weight: 400;
+        background-color: transparent;
+        color: $red;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    &--big {
+        font-size: 18px;
+        padding: 15px 40px;
+    }
+    &--small {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+}

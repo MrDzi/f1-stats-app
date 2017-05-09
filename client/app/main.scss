@@ -1,0 +1,18 @@
+/**
+ * @name main.scss
+ * @description
+ * # RaceWinnersCtrl
+ * Main styles file of the application
+ * Here we import every partial scss file. It's component-based, modular approach. In favor of that, the BEM syntax is being used
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+@import 'shared/styles/variables';
+@import 'shared/styles/mixins';
+@import 'shared/styles/base';
+@import 'shared/styles/buttons';
+@import 'app';
+@import 'shared/directives/grid.scss'
+@import 'components/home/home.scss'

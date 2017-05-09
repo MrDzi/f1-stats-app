@@ -1,0 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+    font-family: 'Racing Sans One', cursive;
+    font-size: 42px;
+    color: #fff;
+    text-align: center;
+    margin: 50px 0 20px;
+    @include tablet {
+        font-size: 34px;
+        margin: 40px 0 10px;
+    }
+    @include mobile {
+        font-size: 28px;
+        margin: 30px 25px 0;
+    }
+}

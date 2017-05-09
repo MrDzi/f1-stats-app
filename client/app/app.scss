@@ -1,0 +1,36 @@
+.app-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    background-image: url('images/f1_stats_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.app-wrapper-inner {
+    padding-bottom: 70px;
+    min-height: 100%;
+}
+
+.app-container {
+    padding: 0 20px;
+    margin: 0 auto;
+    @include desktop {
+        width: 800px;
+    }
+    @include tablet {
+        width: 100%;
+    }
+}

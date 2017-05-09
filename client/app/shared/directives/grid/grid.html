@@ -1,0 +1,26 @@
+<table class="grid">
+	<thead ng-show="startTransition">
+		<tr class="grid__head-row">
+			<th ng-repeat="item in tableHeadItems">
+				<div class="grid__head-item">
+					<span class="fa fa-{{::item.icon}}"></span> {{::item.label}}		
+				</div>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in listItems" 
+		    ng-click="rowClickCallback({seasonChampion: item})" 
+		    class="grid__row" 
+		    ng-style="{'transition-delay': item.transitionDelay}"
+		    ng-class="{'grid__row--is-champion': item.isSeasonChampion,
+		    		   'grid__row--is-clickable': isRowClickable,
+		    		   'grid__row--is-visible': startTransition}">
+			<td ng-repeat="(key, value) in item">
+				<div class="grid__item">
+					{{::item[key]}}
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

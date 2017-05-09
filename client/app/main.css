@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Racing+Sans+One");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: 'Racing Sans One', cursive;
+  font-size: 42px;
+  color: #fff;
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 34px;
+    margin: 40px 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+    margin: 30px 25px 0;
+  }
+}
+
+.app-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-image: url("images/f1_stats_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.app-wrapper-inner {
+  padding-bottom: 70px;
+  min-height: 100%;
+}
+
+.app-container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app-container {
+    width: 100%;
+  }
+}
+
+.grid-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  position: relative;
+  padding-top: 35px;
+}
+
+.grid-wrapper .button--small {
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.grid {
+  width: 100%;
+  min-width: 430px;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .grid {
+    font-size: 14px;
+  }
+}
+
+.grid .grid__item {
+  text-align: center;
+  padding: 20px 30px;
+  margin-bottom: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+  -moz-transition: background-color 0.1s ease-in;
+  -webkit-transition: background-color 0.1s ease-in;
+}
+
+@media (max-width: 767px) {
+  .grid .grid__item {
+    padding: 12px;
+  }
+}
+
+.grid .grid__head-item {
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.grid .grid__head-item .fa {
+  margin-right: 5px;
+  color: #515151;
+}
+
+.grid .grid__row {
+  opacity: 0;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.27);
+  -moz-transition: opacity 0.15s ease-in;
+  -webkit-transition: opacity 0.15s ease-in;
+}
+
+.grid .grid__row:first-of-type .grid__item {
+  margin-top: 2px;
+}
+
+.grid .grid__row--is-champion .grid__item {
+  background-color: rgba(179, 103, 14, 0.6);
+}
+
+.grid .grid__row--is-clickable {
+  cursor: pointer;
+}
+
+.grid .grid__row--is-clickable:hover .grid__item {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.grid .grid__row--is-visible {
+  opacity: 1;
+}
+
+.grid .grid__head-row {
+  background-color: #000;
+  margin-bottom: 3px;
+  border-bottom: 2px solid #B3670E;
+}
+
+.grid .fa-trophy {
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.grid tbody {
+  font-weight: 300;
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  outline: 0;
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.button--primary {
+  background-color: #FF0000;
+}
+
+.button--primary:hover {
+  background-color: #cc0000;
+}
+
+.button--border {
+  background-color: transparent;
+  color: #FF0000;
+  border: 1px solid #FF0000;
+}
+
+.button--border:hover {
+  background-color: #FF0000;
+  color: #fff;
+}
+
+.button--no-border {
+  font-weight: 400;
+  background-color: transparent;
+  color: #FF0000;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.button--big {
+  font-size: 18px;
+  padding: 15px 40px;
+}
+
+.button--small {
+  font-size: 14px;
+  padding: 7px 12px;
+}
+
+.home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__logo {
+  margin-bottom: 75px;
+}

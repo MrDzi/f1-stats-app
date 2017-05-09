@@ -1,0 +1,20 @@
+<div class="season-champions">
+
+	<div ng-if="!vm.loading">
+		<h1>F1 World Champions 2005-2015</h1>
+
+		<div class="grid-wrapper">
+			<grid ng-if="!vm.loading"
+				  list-items="vm.seasonChampions" 
+				  row-click-callback="vm.goToSeason(seasonChampion)"
+				  table-head-items="[
+				  	{label: 'Season', icon: 'calendar-o'},
+				  	{label: 'Driver', icon: 'user'},
+				  	{label: 'Nationality', icon: 'globe'}]">
+			</grid>
+		</div>
+	</div>
+
+	<span us-spinner="{radius: 12, width: 3, length: 5}" spinner-on="vm.loading"></span>
+
+</div>
