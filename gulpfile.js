@@ -9,16 +9,16 @@ var wiredep = require('wiredep').stream;
 var runSequence = require('run-sequence');
 
 var f1StatsApp = {
-    app: require('./bower.json').appPath || 'app',
+    app: require('./bower.json').appPath || 'client',
     dist: 'dist'
 };
 
 var paths = {
     scripts: [f1StatsApp.app + '/**/*.js'],
-    styles: [f1StatsApp.app + '/main.scss'],
+    styles: [f1StatsApp.app + '/app/main.scss'],
     views: {
         main: f1StatsApp.app + '/index.html',
-        files: [f1StatsApp.app + '/views/**/*.html']
+        files: [f1StatsApp.app + '/**/*.html']
     }
 };
 
@@ -36,7 +36,7 @@ var styles = lazypipe()
         precision: 10
     })
     .pipe($.autoprefixer, 'last 1 version')
-    .pipe(gulp.dest, f1StatsApp.app);
+    .pipe(gulp.dest, f1StatsApp.app + '/app');
 
 ///////////
 // Tasks //

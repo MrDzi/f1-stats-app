@@ -17,6 +17,9 @@
 	    	var vm = this;
 
 	    	vm.season = $state.params.season;
+	    	vm.isSearchVisible = false;
+	    	vm.toggleSearch = toggleSearch;
+	    	vm.filter = {};
 	    	var seasonChampionId;
 
 	    	function init() {
@@ -82,6 +85,16 @@
     		function onError(errorMessage) {
 	            NotificationsService.errorMessage(errorMessage);
 	            vm.loading = false;
+	        }
+
+	        /*
+	        	Toggles search visibility and resets search field when the field is being hided
+	        */
+	        function toggleSearch() {
+	        	vm.isSearchVisible = !vm.isSearchVisible;
+	        	if (!vm.isSearchVisible) {
+	        		vm.filter.name = '';
+	        	}
 	        }
 	    	
 	    }

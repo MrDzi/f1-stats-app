@@ -4,9 +4,24 @@
 		<h1>{{::vm.season}} Race Winners</h1>
 
 		<div class="grid-wrapper">
-			<a class="button button--no-border button--small" ui-sref="app.season-champions">&larr; Back</a>
+			<div class="grid-controls">
+				<a class="button button--no-border button--small" ui-sref="app.season-champions">&larr; Back</a>
+				<div class="grid-controls__search" ng-class="{'grid-controls__search--is-visible': vm.isSearchVisible}">
+					<span class="grid-controls__search-trigger" ng-click="vm.toggleSearch()">
+						<span ng-if="!vm.isSearchVisible">Search</span> 
+						<i class="fa fa-search"></i>
+					</span>
+					<input type="text" 
+						   name="search" 
+						   ng-model="vm.filter.name" 
+						   placeholder="Search driver..." 
+						   class="grid-controls__input"
+						   set-focus="vm.isSearchVisible" />
+				</div>
+			</div>
 
-			<grid list-items="vm.raceWinners" 
+			<grid list-items="vm.raceWinners"
+				  filter="vm.filter"
 				  table-head-items="[
 				  	{label: 'Race', icon: 'flag-checkered'},
 				  	{label: 'Driver', icon: 'user'},

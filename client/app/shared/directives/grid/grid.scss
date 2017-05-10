@@ -3,10 +3,72 @@
     overflow-x: auto;
     position: relative;
     padding-top: 35px;
-    .button--small {
+}
+
+.grid-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-controls__search {
+    position: relative;
+    overflow: hidden;
+    width: 145px;
+    height: 25px;
+    text-align: right;
+    &--is-visible {
+        .grid-controls__input {
+            right: 30px !important;
+            opacity: 1 !important;
+        }
+        .fa-search {
+            color: $gray !important;
+        }
+    }
+    .grid-controls__input {
         position: absolute;
-        top: 0px;
-        left: 0;
+        top: 0;
+        right: -115px;
+        width: 115px;
+        opacity: 0;
+        background: none;
+        padding: 0 7px;
+        border: 0;
+        outline: none;
+        color: #fff;
+        @include transition(all .25s ease-in);
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: $gray-light;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: $gray-light;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: $gray-light;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+            color: $gray-light;
+        }
+    }
+    .fa-search {
+        font-size: 19px;
+        color: $red;
+        margin-left: 4px;
+        @include transition(color .2s ease-in);
+    }
+    .grid-controls__search-trigger {
+        color: $red;
+        text-transform: uppercase;
+        cursor: pointer;
+        span {
+            font-size: 14px;
+        }
     }
 }
 
@@ -32,7 +94,7 @@
         padding: 20px 30px;
         .fa {
             margin-right: 5px;
-            color: $gray;
+            color: $gray-dark;
         }
     }
     .grid__row {

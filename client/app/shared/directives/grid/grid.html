@@ -9,7 +9,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="item in listItems" 
+		<tr ng-repeat="item in listItems | filter: filter" 
 		    ng-click="rowClickCallback({seasonChampion: item})" 
 		    class="grid__row" 
 		    ng-style="{'transition-delay': item.transitionDelay}"

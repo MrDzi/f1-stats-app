@@ -20,6 +20,7 @@
                 scope: {
                     listItems: '=',
                     tableHeadItems: '=',
+                    filter: '=',
                     rowClickCallback: '&'
                 },
                 link: function(scope, elem, attrs) {
