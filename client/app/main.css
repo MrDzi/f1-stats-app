@@ -80,6 +80,10 @@ h1 {
   padding-right: 0 !important;
 }
 
+.button--no-border:hover {
+  color: #cc0000;
+}
+
 .button--big {
   font-size: 18px;
   padding: 15px 40px;
@@ -209,22 +213,28 @@ h1 {
   color: #DEDEDE;
 }
 
+.grid-controls__search .grid-controls__search-trigger {
+  color: #FF0000;
+  text-transform: uppercase;
+  cursor: pointer;
+  -moz-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+}
+
+.grid-controls__search .grid-controls__search-trigger:hover {
+  color: #cc0000;
+}
+
+.grid-controls__search .grid-controls__search-trigger span {
+  font-size: 14px;
+}
+
 .grid-controls__search .fa-search {
   font-size: 19px;
   color: #FF0000;
   margin-left: 4px;
   -moz-transition: color 0.2s ease-in;
   -webkit-transition: color 0.2s ease-in;
-}
-
-.grid-controls__search .grid-controls__search-trigger {
-  color: #FF0000;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.grid-controls__search .grid-controls__search-trigger span {
-  font-size: 14px;
 }
 
 .grid {

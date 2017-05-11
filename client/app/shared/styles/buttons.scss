@@ -34,6 +34,9 @@
         color: $red;
         padding-left: 0 !important;
         padding-right: 0 !important;
+        &:hover {
+            color: darken($red, 10%);
+        }
     }
     &--big {
         font-size: 18px;

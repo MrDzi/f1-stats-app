@@ -56,19 +56,23 @@
             color: $gray-light;
         }
     }
+    .grid-controls__search-trigger {
+        color: $red;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include transition(color .2s ease-in);
+        &:hover {
+            color: darken($red, 10%);
+        }
+        span {
+            font-size: 14px;
+        }
+    }
     .fa-search {
         font-size: 19px;
         color: $red;
         margin-left: 4px;
         @include transition(color .2s ease-in);
-    }
-    .grid-controls__search-trigger {
-        color: $red;
-        text-transform: uppercase;
-        cursor: pointer;
-        span {
-            font-size: 14px;
-        }
     }
 }
 
