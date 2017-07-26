@@ -1,4 +1,4 @@
-# Project Title
+# F1 Stats Application
 
 F1 Stats Application is a mini-project which is done as an assignment for Mobiquity
 
